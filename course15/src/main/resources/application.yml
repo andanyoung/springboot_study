@@ -1,0 +1,11 @@
+
+spring:
+  activemq:
+    # activemq url
+    broker-url: tcp://localhost:61616
+    in-memory: true
+    pool:
+      # 如果此处设置为true，需要添加activemq-pool的依赖包，否则会自动配置失败，无法注入JmsMessagingTemplate
+      enabled: false
+server:
+  port: 8081

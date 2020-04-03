@@ -1,0 +1,12 @@
+spring:
+  profiles:
+    active:
+    - pro
+# 配置微服务的地址
+url:
+  # 订单微服务的地址
+  orderUrl: http://localhost:8002
+  # 用户微服务的地址
+  userUrl: http://localhost:8003
+  # 购物车微服务的地址
+  shoppingUrl: http://localhost:8004

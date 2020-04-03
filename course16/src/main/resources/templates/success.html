@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>成功</title>
+</head>
+<body>
+欢迎你<span th:if="${session.user}" th:text="${session.user.username}"></span>
+<a th:href="@{/user/logout}">退出</a>
+</body>
+</html>

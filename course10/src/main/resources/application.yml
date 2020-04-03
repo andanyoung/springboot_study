@@ -1,0 +1,25 @@
+# 服务端口号
+server:
+  port: 8080
+
+# 数据库地址
+datasource:
+  url: localhost:3306/blog_test
+
+spring:
+  datasource: # 数据库配置
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://${datasource.url}?useSSL=false&useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&autoReconnect=true&failOverReadOnly=false&maxReconnects=10
+    username: root
+    password: 123456
+    hikari:
+      maximum-pool-size: 10 # 最大连接池数
+      max-lifetime: 1770000
+
+mybatis:
+  # 指定别名设置的包为所有entity
+  type-aliases-package: com.itcodai.course10.entity
+  configuration:
+    map-underscore-to-camel-case: true # 驼峰命名规范
+  mapper-locations: # mapper映射文件位置
+    - classpath:mapper/*.xml

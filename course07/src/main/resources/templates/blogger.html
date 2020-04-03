@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>博主信息</title>
+</head>
+<body>
+<form action="" th:object="${blogger}" >
+    用户编号：<input name="id" th:value="${blogger.id}"/><br>
+    用户姓名：<input type="text" name="username" th:value="${blogger.getName()}" /><br>
+    登陆密码：<input type="text" name="password" th:value="*{pass}" />
+</form>
+</body>
+</html>
